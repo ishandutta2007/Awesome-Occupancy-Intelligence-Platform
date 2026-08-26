@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="radarSweepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="glowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes pulse-wave {
+        0% { r: 10px; opacity: 0.9; }
+        50% { opacity: 0.4; }
+        100% { r: 140px; opacity: 0; }
+      }
+      @keyframes pulse-wave-delayed {
+        0% { r: 10px; opacity: 0.9; }
+        50% { opacity: 0.3; }
+        100% { r: 140px; opacity: 0; }
+      }
+      @keyframes radar-rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes float-blip {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+        50% { transform: translate(3px, -4px) scale(1.3); opacity: 0.4; }
+      }
+      @keyframes glow-shift {
+        0%, 100% { filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4)); }
+        50% { filter: drop-shadow(0 0 16px rgba(192, 132, 252, 0.7)); }
+      }
+
+      .radar-center { transform-origin: 820px 150px; }
+      .sweep-beam {
+        transform-origin: 820px 150px;
+        animation: radar-rotate 5s linear infinite;
+      }
+      .wave1 {
+        animation: pulse-wave 3.5s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+        transform-origin: 820px 150px;
+      }
+      .wave2 {
+        animation: pulse-wave-delayed 3.5s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+        animation-delay: 1.75s;
+        transform-origin: 820px 150px;
+      }
+      .blip1 { animation: float-blip 2.5s ease-in-out infinite; }
+      .blip2 { animation: float-blip 3.2s ease-in-out infinite 0.8s; }
+      .blip3 { animation: float-blip 2.8s ease-in-out infinite 1.4s; }
+      .banner-title {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        animation: glow-shift 4s ease-in-out infinite;
+      }
+      .banner-sub {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+      .badge-tag {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="300" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Grid lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="50" x2="1000" y2="50" />
+    <line x1="0" y1="100" x2="1000" y2="100" />
+    <line x1="0" y1="150" x2="1000" y2="150" />
+    <line x1="0" y1="200" x2="1000" y2="200" />
+    <line x1="0" y1="250" x2="1000" y2="250" />
+    <line x1="100" y1="0" x2="100" y2="300" />
+    <line x1="200" y1="0" x2="200" y2="300" />
+    <line x1="300" y1="0" x2="300" y2="300" />
+    <line x1="400" y1="0" x2="400" y2="300" />
+    <line x1="500" y1="0" x2="500" y2="300" />
+    <line x1="600" y1="0" x2="600" y2="300" />
+    <line x1="700" y1="0" x2="700" y2="300" />
+  </g>
+
+  <!-- Left Accent Bar -->
+  <rect x="0" y="0" width="8" height="300" rx="4" fill="url(#titleGrad)" />
+
+  <!-- Radar Presence Scanner (Right Side) -->
+  <g class="radar-center">
+    <!-- Ambient Radar Glow -->
+    <circle cx="820" cy="150" r="130" fill="url(#glowGlow)" />
+    
+    <!-- Concentric radar range rings -->
+    <circle cx="820" cy="150" r="120" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,4" opacity="0.4" />
+    <circle cx="820" cy="150" r="85" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.5" />
+    <circle cx="820" cy="150" r="50" fill="none" stroke="#818cf8" stroke-width="1" stroke-dasharray="2,3" opacity="0.6" />
+    <circle cx="820" cy="150" r="20" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.8" />
+
+    <!-- Crosshairs -->
+    <line x1="690" y1="150" x2="950" y2="150" stroke="#38bdf8" stroke-width="1" opacity="0.3" />
+    <line x1="820" y1="20" x2="820" y2="280" stroke="#38bdf8" stroke-width="1" opacity="0.3" />
+
+    <!-- Dynamic Pulsing Sensor Waves -->
+    <circle class="wave1" cx="820" cy="150" r="10" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <circle class="wave2" cx="820" cy="150" r="10" fill="none" stroke="#c084fc" stroke-width="2" />
+
+    <!-- Rotating Radar Sweep Beam -->
+    <g class="sweep-beam">
+      <path d="M 820 150 L 940 110 A 120 120 0 0 1 940 190 Z" fill="url(#radarSweepGrad)" />
+      <line x1="820" y1="150" x2="940" y2="150" stroke="#38bdf8" stroke-width="2" filter="url(#glow)" />
+    </g>
+
+    <!-- Radar Target / People Presence Blips -->
+    <circle class="blip1" cx="870" cy="115" r="4.5" fill="#38bdf8" filter="url(#glow)" />
+    <circle class="blip2" cx="770" cy="180" r="4" fill="#f472b6" filter="url(#glow)" />
+    <circle class="blip3" cx="845" cy="205" r="3.5" fill="#4ade80" filter="url(#glow)" />
+    <circle cx="800" cy="100" r="3" fill="#fbbf24" opacity="0.8" />
+    
+    <!-- Central sensor hub -->
+    <circle cx="820" cy="150" r="6" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="820" cy="150" r="2.5" fill="#ffffff" />
+  </g>
+
+  <!-- Left Content / Typography -->
+  <g transform="translate(45, 0)">
+    <!-- Category Super-Title -->
+    <g transform="translate(0, 52)">
+      <rect x="0" y="0" width="225" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="12" cy="12" r="4" fill="#22c55e" />
+      <text x="24" y="16" fill="#94a3b8" class="badge-tag">CURATED ECOSYSTEM 2026</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="112" fill="url(#titleGrad)" font-size="34" class="banner-title" letter-spacing="-0.5">
+      Awesome Occupancy Intelligence
+    </text>
+    <text x="0" y="148" fill="#f1f5f9" font-size="20" class="banner-title" font-weight="700" opacity="0.95">
+      Platforms, Spatial Sensing &amp; Workplace Analytics
+    </text>
+
+    <!-- Subtitle Description -->
+    <text x="0" y="185" fill="#94a3b8" font-size="13.5" class="banner-sub">
+      Radar • Thermal Sensing • Computer Vision • Wi-Fi CSI • Smart Buildings
+    </text>
+
+    <!-- Feature Pill Badges -->
+    <g transform="translate(0, 215)">
+      <!-- Pill 1: Enterprise SaaS -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="26" rx="6" fill="#1e1b4b" stroke="#4338ca" stroke-width="1" />
+        <text x="12" y="17" fill="#a5b4fc" class="badge-tag">🏢 Enterprise SaaS</text>
+      </g>
+
+      <!-- Pill 2: Open Source -->
+      <g transform="translate(140, 0)">
+        <rect width="130" height="26" rx="6" fill="#064e3b" stroke="#059669" stroke-width="1" />
+        <text x="12" y="17" fill="#6ee7b7" class="badge-tag">⚡ Open Source</text>
+      </g>
+
+      <!-- Pill 3: Privacy First -->
+      <g transform="translate(280, 0)">
+        <rect width="135" height="26" rx="6" fill="#3b0764" stroke="#7e22ce" stroke-width="1" />
+        <text x="12" y="17" fill="#d8b4fe" class="badge-tag">🔒 Privacy-Aware</text>
+      </g>
+
+      <!-- Pill 4: IoT / BMS -->
+      <g transform="translate(425, 0)">
+        <rect width="135" height="26" rx="6" fill="#172554" stroke="#1d4ed8" stroke-width="1" />
+        <text x="12" y="17" fill="#93c5fd" class="badge-tag">📡 IoT &amp; BMS Intel</text>
+      </g>
+    </g>
+  </g>
+</svg>
