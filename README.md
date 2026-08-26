@@ -1,6 +1,6 @@
 # Awesome-Occupancy-Intelligence-Platform
 
-# Top Occupancy Intelligence Platforms Ecosystem
+## Top Occupancy Intelligence Platforms Ecosystem
 **Curated List of SaaS Products & Open-Source GitHub Projects**
 *Focused on Space Utilization, People Counting, Workplace Analytics, Privacy-Aware Presence Sensing & Real Estate Portfolio Insights*
 **Last updated: August 2026**
