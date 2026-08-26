@@ -14,41 +14,25 @@ This repository tracks notable **SaaS platforms** and **open-source projects** f
 Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
 ## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
 - [How to Contribute](#how-to-contribute)
 - [Disclaimer](#disclaimer)
 
 ## SaaS/Hosted Platforms
-- **[Density](https://www.density.io/)**  
-  Radar-based people-counting and occupancy analytics platform with doorway and area sensors plus a unified analytics layer (Atlas) for workplace and building automation use cases.
 
-- **[XY Sense](https://xysense.com/)**  
-  Workplace occupancy and utilization platform using ceiling sensors to deliver space-level insights for real estate and facilities teams.
-
-- **[VergeSense](https://www.vergesense.com/)**  
-  Occupancy intelligence platform combining computer-vision sensors with analytics, benchmarking, and AI-assisted space-planning recommendations.
-
-- **[Butlr](https://www.butlr.com/)**  
-  Thermal (heat-based) occupancy sensing platform that is privacy-first (no cameras, no PII), wireless, and API-oriented for integration into IWMS, BMS, and energy systems.
-
-- **[Locatee](https://www.locatee.com/)**  
-  Workplace analytics platform focused on occupancy, utilization, and employee experience insights across office portfolios.
-
-- **[Occuspace](https://www.occuspace.io/)**  
-  Occupancy and space-utilization solution aimed at understanding real-time and historical use of rooms and floors.
-
-- **[PointGrab](https://www.pointgrab.com/)**  
-  AI-powered occupancy and workplace sensing solutions for commercial buildings.
-
-- **[Infogrid](https://www.infogrid.io/)**  
-  Smart-building platform that includes occupancy and environmental sensing for facilities optimization.
-
-- **[Openpath Presence / related access + occupancy](https://www.openpath.com/)**  
-  Presence and access-related capabilities within broader workplace and security platforms.
-
-- **[Disruptive Technologies](https://www.disruptive-technologies.com/)**  
-  Wireless sensor ecosystem (including occupancy-related sensing) used in smart-building and workplace deployments.
+| Platform | Description | Pricing | Free Tier / Free Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Density](https://www.density.io/)** | Radar-based people-counting and occupancy analytics platform with doorway and area sensors plus unified Atlas analytics. | Hardware from **$229/sensor** (or $149 starting); Software from **$2.50/desk/mo** or **$8.00/room/mo** (billed annually; $15/unit monthly) | **30-day pilot program** limited to 1–2 test floors / designated zones; no free forever plan |
+| **[XY Sense](https://xysense.com/)** | Workplace occupancy and utilization platform using ceiling sensors to deliver space-level insights for real estate teams. | Software & sensor access starting at **~$0.05/sq. ft./month** (based on standard 16,000 sq. ft. office deployment) | **30-day structured pilot trial** limited to 1 floor / test area with live demo setup; no free forever plan |
+| **[VergeSense](https://www.vergesense.com/)** | Occupancy intelligence platform combining computer-vision sensors with analytics, benchmarking, and AI space-planning. | Hardware starting from **~$149/sensor**; Software subscription starting from **~$0.03–$0.06/sq. ft./month** | **30–60 day proof-of-concept pilot** scoped to high-value test areas/rooms with free site survey; no free forever plan |
+| **[Butlr](https://www.butlr.com/)** | Thermal (heat-based) occupancy sensing platform that is privacy-first (no cameras, no PII), wireless, and API-oriented. | Hardware from **$149/sensor** (Heatic 2+); Software/API subscription starting at **$2.50/desk/mo** to **$8.00/room/mo** (~$280/yr starter renewal) | **30-day Starter Kit evaluation trial** limited to 5–10 Heatic sensors and cloud dashboard/API access; no free forever plan |
+| **[Locatee](https://www.locatee.com/)** | Workplace analytics platform focused on occupancy and utilization insights across office portfolios using network data. | Software starting from **~$0.02–$0.05/sq. ft./year** (or **~$1.50–$3.00/employee/year** based on Wi-Fi/LAN data ingest) | **30-day proof-of-concept pilot** limited to 1 building/floor baseline analysis; no free forever plan |
+| **[Occuspace](https://www.occuspace.io/)** | Plug-and-play occupancy and space-utilization platform using wide-area Bluetooth/Wi-Fi signal monitors (Macro sensors). | Starts at **$600/year** for spaces under 5,000 sq. ft. (~$0.12–$0.20/sq. ft./year; 1 sensor covers 2,500–5,000 sq. ft.) | **30-day turnkey pilot kit program** limited to 1–2 Macro sensors covering test zone with ROI audit; no free forever plan |
+| **[PointGrab](https://www.pointgrab.com/)** | AI-powered optical sensing and CogniPoint edge-computing sensors for desk and room occupancy tracking in commercial buildings. | Software license starting from **~$15.37/device/month** ($768.75/50 devices via marketplace) + hardware | **30–60 day CogniPoint 2 Flex pilot trial** limited to 1 pilot room / test installation; no free forever plan |
+| **[Infogrid](https://www.infogrid.io/)** | Smart-building platform combining IoT occupancy, environmental, and cleaning efficiency sensors with AI analytics. | Starting from **~$0.03–$0.05/sq. ft./month** (or **~$100–$250/building/month** base tier for sensor suite) | **30-day guided pilot deployment** limited to select facility zones / 1 test floor; no free forever plan |
+| **[Openpath / Avigilon Alta](https://www.openpath.com/)** | Cloud access control and presence/occupancy sensing ecosystem with mobile credentials and reader hardware. | Software starting from **$5.00/reader/month** (Basic tier, ~$60/door/year) + hardware starting **~$300/reader** | **30-day integrator pilot evaluation** limited to 1–2 test doors/entryways; no free forever plan |
+| **[Disruptive Technologies](https://www.disruptive-technologies.com/)** | Miniature wireless sensor ecosystem (peel-and-stick desk & motion sensors) with DT Studio cloud integration. | **$999 one-time** for Sensor Starter Kit (includes Cloud Connector gateway + 10 sensor credits) + DT Studio at **~$2–$5/sensor/month** | **30-day DT Studio cloud trial** included with Starter Kit bundle (limited to 10 kit sensors & 1 gateway); no free forever plan |
 
 ## Open-Source GitHub Projects
 - **[Computer-vision office seat occupancy projects](https://github.com/)**  
